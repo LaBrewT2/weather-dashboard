@@ -1,4 +1,72 @@
-    function refresh() {  
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+
+<!-- JQuery library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Bootstrap CSS-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<!--Page Header -->
+<div class="jumbotron">
+  <div class="container">
+    <h1>Weather Dashboard </h1>
+  </div>
+</div>
+
+<!-- Page main container with rows -->
+<div id = "maincontainer"class="container">
+  <div class="row">
+
+  <div class="col-4" id = "searchBlock">
+
+    <form id="search">
+    <h5>Search for a City:</h5>
+    <input type="text" class="form-control" id="city" aria-describedby="basic-addon3">
+    <input class="btn btn-primary" id="search" type="submit" value="Search">
+
+    <div id="list-group" class="card" style="width: 18rem;"></div>
+
+    </form>
+
+  </div>
+
+  <div>
+
+      <div id="search-results">
+        <h5 id="city-name" ></h5>
+        <img id="icon">
+        <p id="temp"></p>
+        <p id="humidity"></p>
+        <p id="wind-speed"></p>
+      </div>
+
+      <div id="forecast">
+        <h5>5-Day Forecast:</h5>
+        <div class="row">
+          <section class="col daily" id="day1"></section>
+          <section class="col daily" id="day2"></section>
+          <section class="col daily" id="day3"></section>
+          <section class="col daily" id="day4"></section>
+          <section class="col daily" id="day5"></section>
+        </div>
+      </div>
+
+      </div>
+      </div>
+      </div>
+<script>
+
+  //JavaScript & JQuery
+
+function refresh() {  
     var cityLocal = localStorage.getItem('citySearch');
     $("h6").remove();
 
@@ -43,6 +111,8 @@
     
     refresh();
 
+// Side server API / AJAX call & JQuery
+
     //API key
     var APIKey = "4c023acf398932e1b43cd03002ad8542";
   
@@ -60,7 +130,7 @@
       })
         .then(function(response) {
 
-          // To get current date
+          //Get the current date
           var d = new Date();
 
           var strDate = (d.getMonth()+1) + "/" + d.getDate() + "/" + d.getFullYear();
@@ -69,19 +139,19 @@
           $("#icon").attr("src", "https://openweathermap.org/img/w/" + response.weather[0].icon + ".png")
 
 
-          // Transfer content to HTML
+          //Move city info to HTML
           $("#city-name").text(response.name + " " + "(" + strDate + ")");                   
           // Convert the temp to fahrenheit
           var tempF = ((response.main.temp - 273.15) * 1.80 + 32).toFixed(2);
 
-          // Transfer content to HTML
+          //Move weather content to HTML
           $("#temp").text("Temperature: " + tempF + " " + "°F");
           $("#humidity").text("Humidity: " + response.main.humidity + "%"); 
           $("#wind-speed").text("Wind Speed: " + response.wind.speed + " " +"MPH");
         }); 
 
 
-      //AJAX call to the OpenWeatherMap API for forecast weather
+      //AJAX call to the OpenWeatherMap API for weather forecast 
       $.ajax({
         url: queryURL2,
         method: "GET"
@@ -133,3 +203,9 @@
       });
 
       refresh(); 
+
+  </script>
+
+
+      </body>
+      </html>
