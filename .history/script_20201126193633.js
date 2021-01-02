@@ -1,5 +1,5 @@
  //JavaScript & JQuery
- console.log("hello")
+
  $(document).ready(function () {
   $('#searchBtn').click(function () {
      console.log("hello")
@@ -15,16 +15,16 @@
           url: weatherQueryURL,
 
           method: "GET"
-    ,if: (cityLocal !== null) ,{
-      var :cityLocalArray = JSON.parse(cityLocal),
-      for (i = 0, i , cityLocalArray,length, i,) {
+    if, (cityLocal !== null) {
+      var cityLocalArray = JSON.parse(cityLocal);
+      for (i = 0; i < cityLocalArray.length; i++) {
       console.log(cityLocalArray[i]);
       var searchHistory = $("<h6></h6>").text(cityLocalArray[i]).addClass("city-list");
       $("#list-group").append(searchHistory);
     }
 
     }
-  ,
+  };
 
     //Add click event listener
     //City Name
@@ -56,7 +56,7 @@
                 $(".error").html("field empty");
             }
 
-        
+        )
 
     })
 

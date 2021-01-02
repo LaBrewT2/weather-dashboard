@@ -1,30 +1,31 @@
  //JavaScript & JQuery
- console.log("hello")
+
  $(document).ready(function () {
   $('#searchBtn').click(function () {
      console.log("hello")
       var city = $('.form-control').val();
        //API key
     var APIKey = "4c023acf398932e1b43cd03002ad8542";
+  
     //URL to get current weather
     var weatherQueryURL = "https://api.openweathermap.org/data/2.5/weather?" + "q=" + cityName + "&appid=" + APIKey;
     //URL to get forecast
-    var forecastQueryURL = "https://api.openweathermap.org/data/2.5/forecast?" + "q=" + cityName + "&appid=" + APIKey;
+    var forecastqueryURL = "https://api.openweathermap.org/data/2.5/forecast?" + "q=" + cityName + "&appid=" + APIKey;
        $.ajax({
 
           url: weatherQueryURL,
 
           method: "GET"
-    ,if: (cityLocal !== null) ,{
-      var :cityLocalArray = JSON.parse(cityLocal),
-      for (i = 0, i , cityLocalArray,length, i,) {
+    if (cityLocal !== null) {
+      var cityLocalArray = JSON.parse(cityLocal);
+      for (i = 0; i < cityLocalArray.length; i++) {
       console.log(cityLocalArray[i]);
       var searchHistory = $("<h6></h6>").text(cityLocalArray[i]).addClass("city-list");
       $("#list-group").append(searchHistory);
     }
 
     }
-  ,
+  };
 
     //Add click event listener
     //City Name
@@ -56,7 +57,7 @@
                 $(".error").html("field empty");
             }
 
-        
+        )
 
     })
 

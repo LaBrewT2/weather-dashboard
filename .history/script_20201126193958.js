@@ -1,5 +1,5 @@
  //JavaScript & JQuery
- console.log("hello")
+
  $(document).ready(function () {
   $('#searchBtn').click(function () {
      console.log("hello")
@@ -24,7 +24,7 @@
     }
 
     }
-  ,
+  ,)
 
     //Add click event listener
     //City Name

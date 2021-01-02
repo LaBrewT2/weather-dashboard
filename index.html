@@ -8,23 +8,22 @@
 
 <!-- JQuery library -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <!-- Bootstrap CSS-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="style.css">
-
 </head>
+
 <body>
 <!--Page Header -->
-<div class="jumbotron">
+<div class="jumbotron-fluid">
   <div class="container">
-    <h1>Weather Dashboard </h1>
+    <h1 class="display-4">Weather Dashboard </h1>
   </div>
 </div>
 
 <!-- Page main container with rows -->
-<div id = "maincontainer"class="container">
-  <div class="row">
-
+<section>
+<div id ="maincontainer" class="container">
   <div class="col-4" id = "searchBlock">
 
     <form id="search">
@@ -41,15 +40,14 @@
   <div>
 
       <div id="search-results">
-        <h5 id="city-name" ></h5>
-        <img id="icon">
-        <p id="temp"></p>
+        <h5 id="city-name"class="city-name" ></h5>
+        <p id="temperature"></p>
         <p id="humidity"></p>
         <p id="wind-speed"></p>
       </div>
 
       <div id="forecast">
-        <h5>5-Day Forecast:</h5>
+        <h3>5-Day Forecast:</h3>
         <div class="row">
           <section class="col daily" id="day1"></section>
           <section class="col daily" id="day2"></section>
@@ -61,8 +59,7 @@
 
       </div>
       </div>
-      </div>
+    </section>
 </body>
 <script rel= stylesheet href= /script.js></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </html>
