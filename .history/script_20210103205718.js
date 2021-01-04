@@ -29,7 +29,7 @@ $(document).ready(function(){
     });
 });
 //API Data
-function show(data){
+function showt(data){
   return"<h2>Current Weather for" + data.name +', ' + data.sys.country + "</h2>" +
    "<h3><strong>Weather</strong>: "+ data.weather[0].main + "</h3>" +
   "<h3><strong>Weather</strong>: "+ data.current.weather[0].description + "</h3>" +
@@ -42,6 +42,7 @@ function show(data){
   "<h3><strong>Temperature</strong>: "+ data.daily.temp + "</h3>" +
   "<h3><strong>Humidity</strong>: "+ data.daily.humidity + "</h3>" +
   "<h3><strong>Min. Temperature</strong>: "+ data.daily.temp.min + "</h3>" +
-  "<h3><strong>Max. Temperature</strong>: "+ data.daily.temp.max + "</h3>" ;
+  "<h3><strong>Max. Temperature</strong>: "+ data.daily.temp.max + "</h3>" +
+  ;
 
 }

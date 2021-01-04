@@ -29,7 +29,7 @@ $(document).ready(function(){
     });
 });
 //API Data
-function show(data){
+function showt(data){
   return"<h2>Current Weather for" + data.name +', ' + data.sys.country + "</h2>" +
    "<h3><strong>Weather</strong>: "+ data.weather[0].main + "</h3>" +
   "<h3><strong>Weather</strong>: "+ data.current.weather[0].description + "</h3>" +
