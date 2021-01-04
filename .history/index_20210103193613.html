@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+
+<!-- JQuery library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<!-- Bootstrap CSS-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+<!--Page Header -->
+<div class="jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Weather Dashboard </h1>
+  </div>
+</div>
+
+<!-- Page main container with rows -->
+<div id ="maincontainer" class="container">
+  <div class="row" id = "searchBlock">
+    <h3>Search for a City:</h3>
+  </div>
+  <div class>
+    <span id="error"></span>
+    <input type="text" class="form-control" id="city" aria-describedby="basic-addon3">
+    <input class="btn btn-primary" id="search" type="submit" value="Search">
+
+    <div id="list-group" class="card" style="width: 18rem;"></div>
+
+    
+
+  </div>
+</div>
+
+  
+</body>
+<script src= /script.js></script>
+</html>

@@ -7,8 +7,8 @@ $(document).ready(function(){
       if(city != ''){
 
         $.ajax({
-              //API Call
-              url: 'https://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=imperial" + "&APPID=667a7ad2f064b0cc35a232f16bab9c8d",   
+
+              url: 'https//api.openweathermap.org/data/2.5/weather?q=' + city + "&units=imperial" + "&APPID=667a7ad2f064b0cc35a232f16bab9c8d",   
               type: "GET",
               dataType: "jsonp",
               success: function(data){
@@ -28,10 +28,9 @@ $(document).ready(function(){
 
     });
 });
-//API Data
+
 function show(data){
-  return "<h2>Current Weather for" + data.name +", " + data.sys.country + "</h2>" +
-   "<h3><strong>Weather</strong>: "+ data.weather[0].main + "</h3>" +
+  return "<h3><strong>Weather</strong>: "+ data.weather[0].main + "</h3>" +
   "<h3><strong>Weather</strong>: "+ data.weather[0].description + "</h3>" +
   "<h3><strong>Temperature</strong>: "+ data.main.temp + "</h3>" +
   "<h3><strong>Pressure</strong>: "+ data.main.pressure + "</h3>" +
