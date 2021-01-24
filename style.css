@@ -1,5 +1,11 @@
 body{
-    color: blanchedalmond;
+    color: rgb(174, 149, 111);
+}
+h1{
+    text-align: center;
+}
+h3{
+    text-align: left;
 }
 #rowDiv{
     margin: auto;
